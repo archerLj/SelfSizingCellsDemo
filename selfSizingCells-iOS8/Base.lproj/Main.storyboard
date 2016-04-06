@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="selfSizingCells_iOS8" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vrz-oi-4em">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lfTableViewCellID" rowHeight="68" id="8xw-nd-GV5" customClass="LFTableViewCell" customModule="selfSizingCells_iOS8" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8xw-nd-GV5" id="Amk-HZ-kcl">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="67.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1d7-cd-UVn">
+                                                    <rect key="frame" x="15" y="8" width="530" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="V89-Yt-4sa">
+                                                    <rect key="frame" x="15" y="36" width="530" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="V89-Yt-4sa" firstAttribute="top" secondItem="1d7-cd-UVn" secondAttribute="bottom" constant="7" id="1mw-67-9Qi"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="V89-Yt-4sa" secondAttribute="bottom" constant="2.5" id="Mde-r2-SHO"/>
+                                                <constraint firstItem="V89-Yt-4sa" firstAttribute="leading" secondItem="Amk-HZ-kcl" secondAttribute="leadingMargin" constant="7" id="NR8-up-7iD"/>
+                                                <constraint firstItem="1d7-cd-UVn" firstAttribute="top" secondItem="Amk-HZ-kcl" secondAttribute="topMargin" id="XyN-QZ-ij8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="V89-Yt-4sa" secondAttribute="trailing" constant="7" id="gkC-We-0KE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1d7-cd-UVn" secondAttribute="trailing" constant="7" id="qgC-83-8YL"/>
+                                                <constraint firstItem="1d7-cd-UVn" firstAttribute="leading" secondItem="Amk-HZ-kcl" secondAttribute="leadingMargin" constant="7" id="xq6-cW-yPh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="address" destination="V89-Yt-4sa" id="Ewq-f9-RAM"/>
+                                            <outlet property="name" destination="1d7-cd-UVn" id="RdU-fz-4o0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vrz-oi-4em" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="32I-Si-rDj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vrz-oi-4em" secondAttribute="bottom" id="6Z1-Tj-h4x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vrz-oi-4em" secondAttribute="trailing" id="XJD-eb-54Z"/>
+                            <constraint firstItem="Vrz-oi-4em" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="k6t-uI-YhU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainTableView" destination="Vrz-oi-4em" id="mOy-Fy-1hD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
